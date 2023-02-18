@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <title>salom</title>
+    <!-- reCaptcha v3 key to get on https://www.google.com/recaptcha/admin#list -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lerr_gcAAAAAEHivEVmO3ke5SfYs_p5feg6qpGZ"></script>
+</head>
+<body>
+<script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6Lerr_gcAAAAAEHivEVmO3ke5SfYs_p5feg6qpGZ', {action: 'login'}).then(function(token) {
+                document.body.innerHTML = token;
+                console.log(token)
+            });
+        });
+</script>
+</body>
+</html>
